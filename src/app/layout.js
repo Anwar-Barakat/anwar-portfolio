@@ -34,7 +34,7 @@ const RootLayout = ({ children }) => {
         <Header />
         <MotionWrapper>
           <Transition />
-          <main>{children}</main>
+          <main className="h-full w-full">{children}</main>
         </MotionWrapper>
       </body>
     </html>
