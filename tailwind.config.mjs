@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/services/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/work/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/about/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/contact/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/globals.css",
   ],
   theme: {
@@ -38,10 +34,12 @@ export default {
         'spin-slow': 'spin 6s linear infinite',
       },
       fontFamily: {
-        poppins: [`var(--font-poppins)`, 'sans-serif'],
-        sora: [`var(--font-sora)`, 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        sora: ['var(--font-sora)', 'sans-serif'],
       },
     },
   },
   plugins: [require('tailwind-scrollbar')],
 };
+
+export default config;

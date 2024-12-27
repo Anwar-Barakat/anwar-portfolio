@@ -1,14 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Sora } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import TopLeftImg from "@/components/TopLeftImg";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata = {
@@ -20,9 +25,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sora.variable} ${poppins.variable} antialiased page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
       >
-        {children}
+        <TopLeftImg />
+        <Navbar />
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );
