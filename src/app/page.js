@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       {/* Image */}
-      <div className="w-full h-full absolute right-0 bottom-0">
+      <div className="w-[90%] h-[90%] absolute right-0 bottom-0">
         <div className="relative w-full h-full bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat mix-blend-color-dodge translate-z-0">
           <Image
             src={bgExplosion}
