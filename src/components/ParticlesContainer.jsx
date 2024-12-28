@@ -1,36 +1,93 @@
 "use client";
 
-// next image 
-import Image from "next/image";
-
-// next link
-import Link from "next/link";
-
-// motion
-import { motion } from "framer-motion";
-
-// icons 
-import { HiArrowRight } from "react-icons/hi2";
-
-// image path
-const roundedText = "/rounded-text.png";
+import Particles from "react-tsparticles";
+import { useCallback } from "react";
+import { loadSlim } from "tsparticles-slim";
 
 const ParticlesContainer = () => {
-  return <div className="mx-auto xl:mx-0">
-    <Link 
-      href="/work" 
-      className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group hover:scale-110 transition-all duration-300"
-    >
-      <Image 
-        src={roundedText} 
-        width={148} 
-        height={148} 
-        alt="avatar" 
-        className="animate-spin-slow w-full h-full max-w-[148px] max-h-[148px]"
-      />
-      <HiArrowRight className="absolute text-4xl group-hover:translate-x-2 transition-all duration-300 text-accent"/>
-    </Link>
-  </div>;
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
+
+  return (
+    <Particles
+      className="w-full h-full absolute translate-z-0"
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
+        background: {
+          color: "transparent",
+        },
+        fpsLimit: 120,
+        interactivity: {
+          events: {
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            resize: true,
+          },
+          modes: {
+            push: {
+              quantity: 4,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+          },
+        },
+        particles: {
+          color: {
+            value: "#e68e2e",
+          },
+          links: {
+            color: "#f5d393",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+          },
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+          },
+          number: {
+            density: {
+              enable: true,
+              area: 800,
+            },
+            value: 80,
+          },
+          opacity: {
+            value: 0.5,
+          },
+          shape: {
+            type: "circle",
+          },
+          size: {
+            value: { min: 1, max: 5 },
+          },
+        },
+        detectRetina: true,
+      }}
+    />
+  );
 };
 
 export default ParticlesContainer;
