@@ -27,14 +27,14 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={`${sora.variable} ${poppins.variable} antialiased page bg-site text-white bg-cover bg-no-repeat font-sora relative`}
+        className={`${sora.variable} ${poppins.variable} antialiased page bg-site text-white bg-cover bg-no-repeat font-sora relative overflow-y-auto`}
       >
         <TopLeftImg />
         <Navbar />
         <Header />
         <MotionWrapper>
           <Transition />
-          <main className="h-full w-full">{children}</main>
+          <main className="min-h-screen w-full">{children}</main>
         </MotionWrapper>
       </body>
     </html>
