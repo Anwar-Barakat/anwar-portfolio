@@ -12,7 +12,7 @@ import {
   FaVuejs,
   FaPhp,
   FaGitAlt,
-  FaDocker
+  
 } from "react-icons/fa";
 
 import {
@@ -121,7 +121,7 @@ const About = () => {
   const [isHovered, setIsHovered] = useState(null);
 
   return (
-    <div className="h-full bg-primary/30 relative py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 relative pt-32 pb-16 text-center xl:text-left">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
