@@ -12,7 +12,6 @@ import {
   FaVuejs,
   FaPhp,
   FaGitAlt,
-  
 } from "react-icons/fa";
 
 import {
@@ -27,21 +26,20 @@ import {
 // Professional experience and skills data
 const aboutData = [
   {
-    title: "Technical Skills",
+    title: "Skills",
     info: [
       {
-        title: "Backend Development",
+        title: "Backend",
         icons: [
           <FaPhp key="php" title="PHP" />,
           <FaLaravel key="laravel" title="Laravel" />,
           <SiMysql key="mysql" title="MySQL" />,
           <SiPostgresql key="postgresql" title="PostgreSQL" />,
           <SiRedis key="redis" title="Redis" />,
-          <FaDocker key="docker" title="Docker" />,
         ],
       },
       {
-        title: "Frontend Development", 
+        title: "Frontend",
         icons: [
           <FaVuejs key="vue" title="Vue.js" />,
           <FaReact key="react" title="React" />,
@@ -52,59 +50,58 @@ const aboutData = [
         ],
       },
       {
-        title: "Development Tools",
+        title: "Tools",
         icons: [
           <FaGitAlt key="git" title="Git" />,
-          <FaDocker key="docker" title="Docker" />,
           <FaFigma key="figma" title="Figma" />,
         ],
       }
     ],
   },
   {
-    title: "Professional Experience",
+    title: "Experience",
     info: [
       {
-        title: "Senior Full Stack Developer - Freelance",
+        title: "Senior Full Stack Dev",
         stage: "2021 - Present",
       },
       {
-        title: "Backend Development Specialist", 
-        stage: "2019 - 2021",
+        title: "Backend Specialist",
+        stage: "2019 - 2021", 
       },
       {
-        title: "Junior Web Developer",
-        stage: "2018 - 2019", 
+        title: "Junior Developer",
+        stage: "2018 - 2019",
       },
     ],
   },
   {
-    title: "Education & Certifications",
+    title: "Education",
     info: [
       {
-        title: "Bachelor of Science in Computer Science",
+        title: "BS Computer Science",
         stage: "2015 - 2019",
       },
       {
-        title: "Professional Certifications",
+        title: "Certifications",
         stage: "Udemy & Coursera",
       }
     ],
   },
   {
-    title: "Professional Services",
+    title: "Services",
     info: [
       {
-        title: "Enterprise Web Applications",
-        stage: "Full Stack Development",
+        title: "Web Applications",
+        stage: "Full Stack Solutions",
       },
       {
-        title: "API Architecture & Development",
-        stage: "RESTful & GraphQL Solutions", 
+        title: "API Development",
+        stage: "REST & GraphQL",
       },
       {
-        title: "Database Engineering",
-        stage: "Design & Performance Optimization",
+        title: "Database Design",
+        stage: "Performance Tuning",
       },
     ],
   },
@@ -152,7 +149,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="h2 font-bold tracking-tight"
           >
-            Transforming <span className="text-accent">Visions</span> into Digital Excellence
+            Crafting <span className="text-accent">Digital</span> Excellence
           </motion.h2>
           
           <motion.p
@@ -161,10 +158,9 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="max-w-[600px] mx-auto xl:mx-0 mb-8 xl:mb-12 px-2 xl:px-0 text-lg leading-relaxed"
           >
-            As a seasoned Full Stack Developer with deep expertise in Laravel and modern JavaScript frameworks,
-            I architect and build enterprise-grade web applications. Leveraging my comprehensive understanding of both 
-            backend architecture and frontend development, I deliver scalable, performant solutions that 
-            drive meaningful business outcomes.
+            Full Stack Developer specializing in Laravel and modern JavaScript frameworks.
+            Building scalable enterprise solutions with focus on performance and business value.
+            Expert in both backend architecture and frontend development.
           </motion.p>
 
           <motion.a
@@ -177,7 +173,7 @@ const About = () => {
             transition={{ duration: 0.3 }}
             className="text-accent underline self-start hidden xl:flex items-center gap-2 text-lg font-medium"
           >
-            View Professional Profile
+            View Profile
           </motion.a>
         </motion.div>
 
@@ -187,7 +183,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
-          <div className="grid grid-cols-2 gap-4 xl:gap-6 mx-auto xl:mx-0 mb-6">
+          <div className="flex flex-wrap justify-between items-center gap-4 xl:gap-6 mx-auto xl:mx-0 mb-6">
             {aboutData.map((item, itemInd) => (
               <motion.div
                 key={itemInd}
